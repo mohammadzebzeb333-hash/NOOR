@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habiba Noor | Ultimate Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00f5ff",
+            secondary: "#8b5cf6",
+            dark: "#0f172a",
+            card: "#1e293b",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #00f5ff, #8b5cf6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 glass">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      
+      <h1 class="text-2xl font-bold gradient-text">
+        Habiba Noor
+      </h1>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+        <li><a href="#about" class="hover:text-primary transition">About</a></li>
+        <li><a href="#skills" class="hover:text-primary transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <ul class="flex flex-col gap-4">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <main>
+
+    <section id="home" class="min-h-screen flex items-center pt-24">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left Content -->
+        <div class="fade-in">
+          <p class="text-primary uppercase tracking-widest mb-3">
+            Welcome To My Portfolio
+          </p>
+
+          <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+            Hi, I'm
+            <span class="gradient-text">Habiba Noor</span>
+          </h2>
+
+          <h3 class="text-2xl md:text-3xl text-gray-300 mb-6">
+            Front-End Developer • Graphic Designer • Video Editor
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed mb-8">
+            I create premium digital experiences with modern web design,
+            smooth animations, creative branding, and professional editing.
+          </p>
+
+          <div class="flex gap-4">
+            <a href="#projects"
+              class="bg-primary text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+              View Work
+            </a>
+
+            <a href="#contact"
+              class="border border-primary px-6 py-3 rounded-full hover:bg-primary hover:text-black transition">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="flex justify-center fade-in">
+          <div
+            class="w-80 h-80 rounded-full bg-gradient-to-r from-primary to-secondary p-1">
+            <div
+              class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-7xl">
+              <i class="fa-solid fa-user"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl font-bold gradient-text">About Me</h2>
+          <p class="text-gray-400 mt-4">
+            Passionate about creativity, technology, and innovation.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+
+          <!-- Text -->
+          <div class="fade-in">
+            <p class="text-gray-300 leading-relaxed mb-6">
+              I am Habiba Noor, a creative front-end developer and designer
+              dedicated to building visually stunning and user-friendly
+              digital experiences. I combine modern development skills with
+              artistic creativity to create impactful projects.
+            </p>
+
+            <p class="text-gray-400 leading-relaxed">
+              My goal is to deliver premium-quality websites and creative
+              media that stand out with innovation and elegance.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div class="grid grid-cols-2 gap-6 fade-in">
+
+            <div class="glass p-6 rounded-2xl text-center">
+              <h3 class="text-3xl font-bold text-primary">3+</h3>
+              <p class="text-gray-400 mt-2">Years Experience</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl text-center">
+              <h3 class="text-3xl font-bold text-primary">20+</h3>
+              <p class="text-gray-400 mt-2">Projects Done</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl text-center">
+              <h3 class="text-3xl font-bold text-primary">10+</h3>
+              <p class="text-gray-400 mt-2">Happy Clients</p>
+            </div>
+
+            <div class="glass p-6 rounded-2xl text-center">
+              <h3 class="text-3xl font-bold text-primary">100%</h3>
+              <p class="text-gray-400 mt-2">Creative Passion</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="py-24 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl font-bold gradient-text">Skills</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Skill Card -->
+          <div class="glass p-8 rounded-2xl fade-in hover:-translate-y-2 transition">
+            <i class="fa-solid fa-code text-4xl text-primary mb-6"></i>
+
+            <h3 class="text-2xl font-bold mb-4">Development</h3>
+
+            <ul class="space-y-3 text-gray-300">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="glass p-8 rounded-2xl fade-in hover:-translate-y-2 transition">
+            <i class="fa-solid fa-palette text-4xl text-secondary mb-6"></i>
+
+            <h3 class="text-2xl font-bold mb-4">Creative Skills</h3>
+
+            <ul class="space-y-3 text-gray-300">
+              <li>Graphic Design</li>
+              <li>Video Editing</li>
+              <li>Adobe Premiere Pro</li>
+              <li>Canva</li>
+              <li>Brand Identity</li>
+            </ul>
+          </div>
+
+          <!-- Skill Card -->
+          <div class="glass p-8 rounded-2xl fade-in hover:-translate-y-2 transition">
+            <i class="fa-solid fa-lightbulb text-4xl text-primary mb-6"></i>
+
+            <h3 class="text-2xl font-bold mb-4">Soft Skills</h3>
+
+            <ul class="space-y-3 text-gray-300">
+              <li>Communication</li>
+              <li>Creativity</li>
+              <li>Leadership</li>
+              <li>Teamwork</li>
+              <li>Problem Solving</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="py-24">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl font-bold gradient-text">Projects</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+          <!-- Project Card -->
+          <div class="glass rounded-2xl overflow-hidden fade-in">
+            <div class="h-52 bg-gradient-to-r from-primary to-secondary"></div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">Portfolio Website</h3>
+
+              <p class="text-gray-400 mb-4">
+                A premium responsive personal portfolio with animations and modern UI.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-primary hover:underline">View Live</a>
+                <a href="#" class="text-secondary hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="glass rounded-2xl overflow-hidden fade-in">
+            <div class="h-52 bg-gradient-to-r from-secondary to-primary"></div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">Creative Branding</h3>
+
+              <p class="text-gray-400 mb-4">
+                Professional branding and social media design project.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Canva</span>
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Photoshop</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-primary hover:underline">View Live</a>
+                <a href="#" class="text-secondary hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div class="glass rounded-2xl overflow-hidden fade-in">
+            <div class="h-52 bg-gradient-to-r from-primary to-purple-700"></div>
+
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">Video Editing</h3>
+
+              <p class="text-gray-400 mb-4">
+                Cinematic and professional video editing for content creators.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-5">
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">Premiere Pro</span>
+                <span class="bg-slate-800 px-3 py-1 rounded-full text-sm">After Effects</span>
+              </div>
+
+              <div class="flex gap-4">
+                <a href="#" class="text-primary hover:underline">View Live</a>
+                <a href="#" class="text-secondary hover:underline">Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-24 bg-slate-950">
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-4xl font-bold gradient-text">Contact Me</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+
+          <!-- Form -->
+          <form class="glass p-8 rounded-2xl fade-in">
+
+            <div class="mb-6">
+              <label class="block mb-2">Name</label>
+              <input
+                type="text"
+                class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 focus:outline-none focus:border-primary"
+                placeholder="Your Name"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label class="block mb-2">Email</label>
+              <input
+                type="email"
+                class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 focus:outline-none focus:border-primary"
+                placeholder="Your Email"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label class="block mb-2">Message</label>
+              <textarea
+                rows="5"
+                class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 focus:outline-none focus:border-primary"
+                placeholder="Write your message..."
+              ></textarea>
+            </div>
+
+            <button
+              class="bg-primary text-black px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+              Send Message
+            </button>
+
+          </form>
+
+          <!-- Social Links -->
+          <div class="flex flex-col justify-center fade-in">
+
+            <h3 class="text-3xl font-bold mb-6">
+              Let's Connect
+            </h3>
+
+            <p class="text-gray-400 mb-8">
+              Feel free to contact me for collaborations, projects, or creative ideas.
+            </p>
+
+            <div class="flex gap-6 text-3xl">
+              <a href="#" class="hover:text-primary transition">
+                <i class="fa-brands fa-github"></i>
+              </a>
+
+              <a href="#" class="hover:text-primary transition">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a href="#" class="hover:text-primary transition">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="#" class="hover:text-primary transition">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+      <p class="text-gray-400">
+        © 2026 Habiba Noor. All Rights Reserved.
+      </p>
+
+      <a href="#home"
+        class="bg-primary text-black px-4 py-2 rounded-full hover:scale-105 transition">
+        Back To Top
+      </a>
+
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    // Mobile Menu
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Scroll Animations
+    const fadeElements = document.querySelectorAll(".fade-in");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    fadeElements.forEach((el) => observer.observe(el));
+
+  </script>
+
+</body>
+</html>
